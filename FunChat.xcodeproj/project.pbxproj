@@ -12,9 +12,12 @@
 		52FFD4621E97816800A01060 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 52FFD4601E97816800A01060 /* Main.storyboard */; };
 		52FFD4641E97816800A01060 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 52FFD4631E97816800A01060 /* Assets.xcassets */; };
 		52FFD4671E97816800A01060 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 52FFD4651E97816800A01060 /* LaunchScreen.storyboard */; };
+		93F251CD9B7E9896FCC9EB0F /* Pods_FunChat.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 418C44847BB6C13F0769085F /* Pods_FunChat.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1902CE75031172BE4E09695B /* Pods-FunChat.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FunChat.release.xcconfig"; path = "Pods/Target Support Files/Pods-FunChat/Pods-FunChat.release.xcconfig"; sourceTree = "<group>"; };
+		418C44847BB6C13F0769085F /* Pods_FunChat.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FunChat.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		52FFD4591E97816800A01060 /* FunChat.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FunChat.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		52FFD45C1E97816800A01060 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		52FFD45E1E97816800A01060 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -22,6 +25,7 @@
 		52FFD4631E97816800A01060 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		52FFD4661E97816800A01060 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		52FFD4681E97816800A01060 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A0FAFE4D3D75BD8B515F55CB /* Pods-FunChat.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FunChat.debug.xcconfig"; path = "Pods/Target Support Files/Pods-FunChat/Pods-FunChat.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,6 +33,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				93F251CD9B7E9896FCC9EB0F /* Pods_FunChat.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -40,6 +45,8 @@
 			children = (
 				52FFD45B1E97816800A01060 /* FunChat */,
 				52FFD45A1E97816800A01060 /* Products */,
+				D167E25897858BC002268041 /* Pods */,
+				8F130E0C1CDCE59F5C7886CC /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -64,6 +71,23 @@
 			path = FunChat;
 			sourceTree = "<group>";
 		};
+		8F130E0C1CDCE59F5C7886CC /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				418C44847BB6C13F0769085F /* Pods_FunChat.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		D167E25897858BC002268041 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				A0FAFE4D3D75BD8B515F55CB /* Pods-FunChat.debug.xcconfig */,
+				1902CE75031172BE4E09695B /* Pods-FunChat.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -71,9 +95,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 52FFD46B1E97816800A01060 /* Build configuration list for PBXNativeTarget "FunChat" */;
 			buildPhases = (
+				95997CE5E8657925E5E634E3 /* [CP] Check Pods Manifest.lock */,
 				52FFD4551E97816800A01060 /* Sources */,
 				52FFD4561E97816800A01060 /* Frameworks */,
 				52FFD4571E97816800A01060 /* Resources */,
+				33CAFABE8C21AC1A37236799 /* [CP] Embed Pods Frameworks */,
+				F2ADDFBAE1A21A1AC4219777 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -130,6 +157,54 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		33CAFABE8C21AC1A37236799 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-FunChat/Pods-FunChat-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		95997CE5E8657925E5E634E3 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		F2ADDFBAE1A21A1AC4219777 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-FunChat/Pods-FunChat-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		52FFD4551E97816800A01060 /* Sources */ = {
@@ -258,6 +333,7 @@
 		};
 		52FFD46C1E97816800A01060 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = A0FAFE4D3D75BD8B515F55CB /* Pods-FunChat.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = FunChat/Info.plist;
@@ -270,6 +346,7 @@
 		};
 		52FFD46D1E97816800A01060 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1902CE75031172BE4E09695B /* Pods-FunChat.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = FunChat/Info.plist;
