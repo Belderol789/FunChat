@@ -12,6 +12,7 @@
 		52FFD4621E97816800A01060 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 52FFD4601E97816800A01060 /* Main.storyboard */; };
 		52FFD4641E97816800A01060 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 52FFD4631E97816800A01060 /* Assets.xcassets */; };
 		52FFD4671E97816800A01060 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 52FFD4651E97816800A01060 /* LaunchScreen.storyboard */; };
+		52FFD4771E978F0900A01060 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 52FFD4761E978F0900A01060 /* GoogleService-Info.plist */; };
 		93F251CD9B7E9896FCC9EB0F /* Pods_FunChat.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 418C44847BB6C13F0769085F /* Pods_FunChat.framework */; };
 /* End PBXBuildFile section */
 
@@ -25,6 +26,7 @@
 		52FFD4631E97816800A01060 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		52FFD4661E97816800A01060 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		52FFD4681E97816800A01060 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		52FFD4761E978F0900A01060 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		A0FAFE4D3D75BD8B515F55CB /* Pods-FunChat.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FunChat.debug.xcconfig"; path = "Pods/Target Support Files/Pods-FunChat/Pods-FunChat.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -66,6 +68,7 @@
 				52FFD4601E97816800A01060 /* Main.storyboard */,
 				52FFD4631E97816800A01060 /* Assets.xcassets */,
 				52FFD4651E97816800A01060 /* LaunchScreen.storyboard */,
+				52FFD4761E978F0900A01060 /* GoogleService-Info.plist */,
 				52FFD4681E97816800A01060 /* Info.plist */,
 			);
 			path = FunChat;
@@ -151,6 +154,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				52FFD4671E97816800A01060 /* LaunchScreen.storyboard in Resources */,
+				52FFD4771E978F0900A01060 /* GoogleService-Info.plist in Resources */,
 				52FFD4641E97816800A01060 /* Assets.xcassets in Resources */,
 				52FFD4621E97816800A01060 /* Main.storyboard in Resources */,
 			);
@@ -376,6 +380,7 @@
 				52FFD46D1E97816800A01060 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
