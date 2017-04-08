@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		52408F1C1E97E5F700083F78 /* Message.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52408F1B1E97E5F700083F78 /* Message.swift */; };
+		52408F1E1E97ED7600083F78 /* MessageTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52408F1D1E97ED7600083F78 /* MessageTableViewCell.swift */; };
 		52FFD45D1E97816800A01060 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52FFD45C1E97816800A01060 /* AppDelegate.swift */; };
 		52FFD45F1E97816800A01060 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52FFD45E1E97816800A01060 /* ViewController.swift */; };
 		52FFD4621E97816800A01060 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 52FFD4601E97816800A01060 /* Main.storyboard */; };
@@ -19,6 +21,8 @@
 /* Begin PBXFileReference section */
 		1902CE75031172BE4E09695B /* Pods-FunChat.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FunChat.release.xcconfig"; path = "Pods/Target Support Files/Pods-FunChat/Pods-FunChat.release.xcconfig"; sourceTree = "<group>"; };
 		418C44847BB6C13F0769085F /* Pods_FunChat.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FunChat.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		52408F1B1E97E5F700083F78 /* Message.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Message.swift; sourceTree = "<group>"; };
+		52408F1D1E97ED7600083F78 /* MessageTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MessageTableViewCell.swift; sourceTree = "<group>"; };
 		52FFD4591E97816800A01060 /* FunChat.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FunChat.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		52FFD45C1E97816800A01060 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		52FFD45E1E97816800A01060 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -65,6 +69,8 @@
 			children = (
 				52FFD45C1E97816800A01060 /* AppDelegate.swift */,
 				52FFD45E1E97816800A01060 /* ViewController.swift */,
+				52408F1D1E97ED7600083F78 /* MessageTableViewCell.swift */,
+				52408F1B1E97E5F700083F78 /* Message.swift */,
 				52FFD4601E97816800A01060 /* Main.storyboard */,
 				52FFD4631E97816800A01060 /* Assets.xcassets */,
 				52FFD4651E97816800A01060 /* LaunchScreen.storyboard */,
@@ -215,6 +221,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				52408F1C1E97E5F700083F78 /* Message.swift in Sources */,
+				52408F1E1E97ED7600083F78 /* MessageTableViewCell.swift in Sources */,
 				52FFD45F1E97816800A01060 /* ViewController.swift in Sources */,
 				52FFD45D1E97816800A01060 /* AppDelegate.swift in Sources */,
 			);
