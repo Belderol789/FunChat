@@ -72,10 +72,10 @@ class ViewController: UIViewController {
             
             self.addMessageToArray(anId: snapshot.key, chatInfo: info)
             self.messages.sort(by: { (chat1,chat2) -> Bool in
-                return chat1.id < chat2.id
+                return chat1.id > chat2.id
             })
             
-            if let lastMessage = self.messages.last {
+            if let lastMessage = self.messages.first {
                 self.chatId = lastMessage.id
             }
             
