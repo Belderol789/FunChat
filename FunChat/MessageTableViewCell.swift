@@ -11,7 +11,6 @@ import UIKit
 class MessageTableViewCell: UITableViewCell {
 
     @IBOutlet weak var chatLabel: UILabel!
-    @IBOutlet weak var bodyLabel: UILabel!
     override func awakeFromNib() {
         super.awakeFromNib()
         
