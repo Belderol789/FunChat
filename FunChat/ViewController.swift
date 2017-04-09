@@ -17,9 +17,10 @@ class ViewController: UIViewController {
     
     
     var ref: FIRDatabaseReference!
-    var chatId : Int! = 0
+    var chatId : Int = 00001
     var messages : [Message] = []
-    var lastID : Int = 00001
+    var currentUser : String? = "admin"
+   // var lastID : Int = 0
     
   
     @IBAction func buttonSendMessage(_ sender: Any) {
@@ -40,21 +41,23 @@ class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-  
+        
+        
+        ref = FIRDatabase.database().reference()
         self.tableView.dataSource = self
         self.tableView.delegate = self
         
-        ref = FIRDatabase.database().reference()
+
         listenToFireBase()
       
     }
     
-    func addMessageToArray(id : Any, chatInfo : NSDictionary) {
+    func addMessageToArray(anId : Any, chatInfo : NSDictionary) {
         if let chatText = chatInfo["chatText"] as? String,
-            let id = id as? String{
-            let currentChatId = Int(id)
+            let messageId = anId as? String{
+            let currentChatId = Int(messageId)
             
-            let newMessage = Message(id: currentChatId!, chatText: chatText)
+            let newMessage = Message(anId: currentChatId!, chatText: chatText)
             self.messages.append(newMessage)
         }
     }
@@ -67,18 +70,18 @@ class ViewController: UIViewController {
             guard let info = snapshot.value as? NSDictionary
                 else{return}
             
-            self.addMessageToArray(id: snapshot.key, chatInfo: info)
+            self.addMessageToArray(anId: snapshot.key, chatInfo: info)
             self.messages.sort(by: { (chat1,chat2) -> Bool in
                 return chat1.id < chat2.id
             })
             
             if let lastMessage = self.messages.last {
-                self.lastID = lastMessage.id
+                self.chatId = lastMessage.id
             }
             
             let indexPath = IndexPath(item: self.messages.count - 1, section: 0)
             self.tableView.insertRows(at: [indexPath], with: .right)
-            self.tableView.reloadData()
+
             
         })
         

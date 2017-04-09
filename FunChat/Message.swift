@@ -11,13 +11,16 @@ class Message {
     var id : Int
     var chatText : String
 
+
     init() {
         id = 0
         chatText = ""
+   
     }
-    init(id :Int , chatText : String) {
-        self.id = id
+    init(anId :Int , chatText : String) {
+        self.id = anId
         self.chatText = chatText
-
+ 
+    
     }
 }
