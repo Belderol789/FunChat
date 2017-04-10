@@ -21,6 +21,7 @@ class ViewController: UIViewController {
     var messages : [Message] = []
     var currentUser : String? = "admin"
     let cellSpacingHeight : CGFloat = 5
+    
    // var lastID : Int = 0
     
   
@@ -47,6 +48,9 @@ class ViewController: UIViewController {
         ref = FIRDatabase.database().reference()
         self.tableView.dataSource = self
         self.tableView.delegate = self
+        tableView.backgroundColor = .lightGray
+     
+        
         
 
         listenToFireBase()
@@ -82,6 +86,8 @@ class ViewController: UIViewController {
             
             let indexPath = IndexPath(item: self.messages.count - 1, section: 0)
             self.tableView.insertRows(at: [indexPath], with: .right)
+            
+            self.tableView.reloadData()
 
             
         })
@@ -151,21 +157,25 @@ class ViewController: UIViewController {
 
 extension ViewController :UITableViewDataSource,UITableViewDelegate {
     
+//    
+//    func numberOfSections(in tableView: UITableView) -> Int {
+//        return messages.count
+//    }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return messages.count
     }
     
-    func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
-        return cellSpacingHeight
-    }
-    
-    func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
-        let headerView = UIView()
-        headerView.backgroundColor = UIColor.clear
-        return headerView
-    }
-    
+//    func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+//        return cellSpacingHeight
+//    }
+//    
+//    func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+//        let headerView = UIView()
+//        headerView.backgroundColor = UIColor.clear
+//        return headerView
+//    }
+//    
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         guard let cell = tableView.dequeueReusableCell(withIdentifier: "chatCell") as? MessageTableViewCell
@@ -173,11 +183,17 @@ extension ViewController :UITableViewDataSource,UITableViewDelegate {
         let currentMessage = messages[indexPath.row]
         
         cell.chatLabel.text = currentMessage.chatText
-        cell.backgroundColor = UIColor.white
-        cell.layer.borderColor = UIColor.black.cgColor
-        cell.layer.borderWidth = 1
-        cell.layer.cornerRadius = 8
-        cell.clipsToBounds = true
+        cell.backgroundColor = .clear
+        cell.contentView.backgroundColor = .clear
+        cell.containerView.backgroundColor = .white
+        cell.containerView.layer.cornerRadius = 8.0
+        cell.containerView.layer.masksToBounds = true
+        
+        
+//        cell.layer.borderColor = UIColor.black.cgColor
+//        cell.layer.borderWidth = 1
+//        cell.layer.cornerRadius = 8
+//        cell.clipsToBounds = true
         print("Chat ID: ", currentMessage.id)
         
         return cell
